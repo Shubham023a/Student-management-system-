@@ -4,7 +4,7 @@
 #include <string>
 #include <map>
 #include <limits>
-#include <sstream> // Add this include at the top of your file
+#include <sstream> 
 
 using namespace std;
 
@@ -25,7 +25,7 @@ public:
     void markAttendance();
     void addGrade(const string& subject, float grade);
     int getRollNumber() const;
-    const string& getName() const; // Getter for name
+    const string& getName() const; 
     void saveToFile() const;
     static void loadFromFile(vector<Student>& students);
 };
@@ -42,7 +42,7 @@ public:
     void displayTeacher() const;
     void assignClassSchedule(const string& schedule);
     int getTeacherID() const;
-    const string& getName() const; // Getter for name
+    const string& getName() const
     void saveToFile() const;
     static void loadFromFile(vector<Teacher>& teachers);
 };
@@ -130,7 +130,7 @@ void Student::saveToFile() const {
         file << "END_GRADES\n";
         file.close();
     } else {
-        cout << "Error: Could not open file for writing.\n";
+        cout << "\n";
     }
 }
 
@@ -162,7 +162,7 @@ void Student::loadFromFile(vector<Student>& students) {
         }
         file.close();
     } else {
-        cout << "Error: Could not open file for reading.\n";
+        cout << "\n";
     }
 }
 
@@ -202,7 +202,7 @@ void Teacher::saveToFile() const {
              << schedule << "\n";
         file.close();
     } else {
-        cout << "Error: Could not open file for writing.\n";
+        cout << "\n";
     }
 }
 
@@ -220,7 +220,7 @@ void Teacher::loadFromFile(vector<Teacher>& teachers) {
         }
         file.close();
     } else {
-        cout << "Error: Could not open file for reading.\n";
+        cout << \n";
     }
 }
 
